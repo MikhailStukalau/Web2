@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 def index(request):
-    return HttpResponse("Hello my friend!")
+    return render(request, 'index.html')
 
-def text(request):
-    return HttpResponse("Some text")
+def about(request):
+    return HttpResponse("ABOUT US!")
