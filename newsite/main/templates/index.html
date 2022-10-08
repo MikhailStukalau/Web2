@@ -1,9 +1,17 @@
 {% extends 'base.html'%}
 {% block title %}
-Main page
+{{ title }}
 {% endblock %}
 
 {% block content %}
     <h1>Main page!</h1>
-    <p>Some text</p>
+        {% for el in task %}
+        <div class="alert alert-warning mt-2">
+            <h3>{{ el.title }}</h3>
+            <p>{{ el.task }}</p>
+            <small>
+               Дата создания: {{ el.created_on }}
+            </small>
+        </div>
+        {% endfor %}
 {% endblock %}
