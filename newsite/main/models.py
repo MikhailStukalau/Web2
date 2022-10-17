@@ -1,8 +1,8 @@
 from django.db import models
 
 class Task(models.Model):
-    title = models.CharField("TITLE", max_length=250)
-    task = models.TextField("описание")
+    title = models.CharField("Название", max_length=250)
+    task = models.TextField("Описание")
     created_on = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
